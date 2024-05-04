@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import classnames from "classnames";
+import { useTheme } from "./providers/ThemeProvider";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import AppRouter from "./components/AppRouter";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./assets/css/style.css";
 
 function App() {
+  const { isDarkTheme } = useTheme();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className={classnames("app", { dark: isDarkTheme })}>
+        <AppRouter />
+      </div>
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,15 @@
+export const HOME_PAGE_ROUTE = "/";
+export const RECIPES_PAGE_ROUTE = "/recipes";
+export const ABOUT_PAGE_ROUTE = "/about";
+export const AUTHOR_PAGE_ROUTE = "/author/:userid";
+export const RECEIPT_PAGE_ROUTE = "/receipt/:userid/:name";
+export const SETTINGS_PAGE_ROUTE = "/settings";
+export const LOGIN_PAGE_ROUTE = "/login";
+export const REGIST_PAGE_ROUTE = "/registration";
+export const REGIST_COMPANY_PAGE_ROUTE = "/companyregistration";
+export const VACANCIES_PAGE_ROUTE = "/vacancies";
+export const VACANCY_PAGE_ROUTE = "/vacancy/:vacancyid/:title";
+export const GUIDES_PAGE_ROUTE = "/guides";
+export const GUIDE_PAGE_ROUTE = "/guide/:guideid/:title";
+export const MENTOR_PAGE_ROUTE = "/mentor";
+export const CONTACTS_PAGE_ROUTE = "/contacts";
