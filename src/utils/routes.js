@@ -1,41 +1,18 @@
-
 import HomePage from "../pages/HomePage";
-import RecipesPage from "../pages/RecipesPage";
-import SettingsPage from "../pages/SettingsPage";
-import ReceiptPage from "../pages/ReceiptPage";
-import NotFoundPage from "../pages/NotFoundPage";
-import AuthorPage from "../pages/AuthorPage";
-import LoginPage from "../pages/LoginPage";
-import MentorPage from "../pages/MentorPage";
-import ContactPage from "../pages/ContactPage";
-import GuidesPage from "../pages/GuidesPage";
-import GuidePage from "../pages/GuidePage";
-import VacanciesPage from "../pages/VacanciesPage";
-import VacancyPage from "../pages/VacancyPage";
 import AboutPage from "../pages/AboutPage";
-import CompanyRegisterPage from "../pages/CompanyRegistrPage";
-
-
+import NotFoundPage from "../pages/NotFoundPage";
+import VacanciesPage from "../pages/VacanciesPage";
+import GuidesPage from "../pages/GuidesPage";
+import LoginPage from "../pages/LoginPage";
 
 import {
-  HOME_PAGE_ROUTE,
-  RECEIPT_PAGE_ROUTE,
-  ABOUT_PAGE_ROUTE,
-  RECIPES_PAGE_ROUTE,
-  SETTINGS_PAGE_ROUTE,
-  AUTHOR_PAGE_ROUTE,
-  LOGIN_PAGE_ROUTE,
-  VACANCIES_PAGE_ROUTE,
-  VACANCY_PAGE_ROUTE,
-  GUIDES_PAGE_ROUTE,
-  GUIDE_PAGE_ROUTE,
-  MENTOR_PAGE_ROUTE,
-  CONTACTS_PAGE_ROUTE,
-  REGIST_PAGE_ROUTE,
-  REGIST_COMPANY_PAGE_ROUTE
+  ABOUT_PAGE_ROUTE, GUIDES_PAGE_ROUTE,
+  HOME_PAGE_ROUTE, LOGIN_PAGE_ROUTE, VACANCIES_PAGE_ROUTE,
+  REGISTER_PAGE_ROUTE, REGISTER_COMPANY_PAGE_ROUTE, VACANCY_PAGE_ROUTE
 } from "./consts";
-import RegistrPage from "../pages/RegistrPage";
-
+import RegisterPage from "../pages/RegisterPage";
+import RegisterCompanyPage from "../pages/RegisterCompanyPage";
+import VacancyPage from "../pages/VacancyPage";
 
 
 export const routes = [
@@ -46,34 +23,6 @@ export const routes = [
   {
     path: ABOUT_PAGE_ROUTE,
     element: AboutPage,
-  },
-  {
-    path: RECIPES_PAGE_ROUTE,
-    element: RecipesPage,
-  },
-  {
-    path: SETTINGS_PAGE_ROUTE,
-    element: SettingsPage,
-  },
-  {
-    path: RECEIPT_PAGE_ROUTE,
-    element: ReceiptPage,
-  },
-  {
-    path: AUTHOR_PAGE_ROUTE,
-    element: AuthorPage,
-  },
-  {
-    path: LOGIN_PAGE_ROUTE,
-    element: LoginPage,
-  },
-  {
-    path: REGIST_PAGE_ROUTE,
-    element: RegistrPage,
-  },
-  {
-    path: REGIST_COMPANY_PAGE_ROUTE,
-    element: CompanyRegisterPage,
   },
   {
     path: VACANCIES_PAGE_ROUTE,
@@ -88,21 +37,19 @@ export const routes = [
     element: GuidesPage,
   },
   {
-    path: GUIDE_PAGE_ROUTE,
-    element: GuidePage,
+    path: LOGIN_PAGE_ROUTE,
+    element: LoginPage,
   },
   {
-    path: MENTOR_PAGE_ROUTE,
-    element: MentorPage,
+    path: REGISTER_PAGE_ROUTE,
+    element: RegisterPage,
   },
   {
-    path: CONTACTS_PAGE_ROUTE,
-    element: ContactPage,
+    path: REGISTER_COMPANY_PAGE_ROUTE,
+    element: RegisterCompanyPage,
   },
-  
   {
     path: "*",
     element: NotFoundPage,
   },
-  
 ];

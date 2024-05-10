@@ -1,15 +1,15 @@
-import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/RegisterForm";
 
-function LoginPage() {
+function RegisterPage() {
     return (
         <main>
             <section className="default-block">
                 <div className="container">
-                    <LoginForm />
+                    <RegisterForm />
                 </div>
             </section>
         </main>
     );
 }
 
-export default LoginPage;
+export default RegisterPage;
