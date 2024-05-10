@@ -28,7 +28,7 @@ function RegisterCompanyForm() {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form register" onSubmit={handleSubmit}>
             <h1 className="title">Регистрация компании</h1>
             <input
                 className="form-control"

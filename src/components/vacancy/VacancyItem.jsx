@@ -17,7 +17,7 @@ export default function VacancyItem({ vacancy }) {
   console.log(route);
 
   useEffect(() => {
-    async function fetchVacncies() {
+    async function fetchVacancies() {
       try {
         const res = await axiosInstance.get(`/users/${vacancy.userId}`);
         const resTypes = await axiosInstance.get(
@@ -30,7 +30,7 @@ export default function VacancyItem({ vacancy }) {
       }
     }
 
-    fetchVacncies();
+    fetchVacancies();
   }, [vacancy.userId, vacancy.workTypeId]); // Добавлены зависимости
 
   return (

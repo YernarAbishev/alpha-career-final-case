@@ -5,7 +5,8 @@ import Error from "../components/Error";
 import Loader from "../components/Loader";
 import { useParams } from "react-router-dom";
 import splitHundreds from "../utils/numberFormatter";
-
+import {VACANCIES_PAGE_ROUTE} from "../utils/consts";
+import {Link} from "react-router-dom";
 function VacancyPage() {
   const [vacancies, setVacancy] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -50,7 +51,10 @@ function VacancyPage() {
   return (
     <main>
       <section className="default-block">
-        <div className="container-job d-flex space-between">
+        <div className="container mb-10">
+          <Link to={VACANCIES_PAGE_ROUTE} className="button is-danger">Назад</Link>
+        </div>
+        <div className="container d-flex space-between">
           <div className="left">
             <h1 className="title">{vacancies.title}</h1>
             <h2 className='job-salary mt-10'>{splitHundreds(vacancies.salary)} тг</h2>

@@ -6,14 +6,25 @@ import GuidesPage from "../pages/GuidesPage";
 import LoginPage from "../pages/LoginPage";
 
 import {
-  ABOUT_PAGE_ROUTE, GUIDES_PAGE_ROUTE,
-  HOME_PAGE_ROUTE, LOGIN_PAGE_ROUTE, VACANCIES_PAGE_ROUTE,
-  REGISTER_PAGE_ROUTE, REGISTER_COMPANY_PAGE_ROUTE, VACANCY_PAGE_ROUTE
+  ABOUT_PAGE_ROUTE,
+  GUIDES_PAGE_ROUTE,
+  HOME_PAGE_ROUTE,
+  LOGIN_PAGE_ROUTE,
+  VACANCIES_PAGE_ROUTE,
+  REGISTER_PAGE_ROUTE,
+  REGISTER_COMPANY_PAGE_ROUTE,
+  VACANCY_PAGE_ROUTE,
+  GUIDE_ADMIN_PAGE,
+  COMPANY_ADMIN_PAGE,
+  GUIDE_UPDATE_PAGE_ROUTE, GUIDE_PAGE_ROUTE,
 } from "./consts";
 import RegisterPage from "../pages/RegisterPage";
 import RegisterCompanyPage from "../pages/RegisterCompanyPage";
 import VacancyPage from "../pages/VacancyPage";
-
+import GuideAdminPage from "../pages/GuideAdminPage";
+import CompanyAdminPage from "../pages/CompanyAdminPage";
+import UpdatePost from "../components/guide/UpdateGuideForm";
+import GuidePage from "../pages/GuidePage";
 
 export const routes = [
   {
@@ -37,6 +48,10 @@ export const routes = [
     element: GuidesPage,
   },
   {
+    path: GUIDE_PAGE_ROUTE,
+    element: GuidePage,
+  },
+  {
     path: LOGIN_PAGE_ROUTE,
     element: LoginPage,
   },
@@ -47,6 +62,18 @@ export const routes = [
   {
     path: REGISTER_COMPANY_PAGE_ROUTE,
     element: RegisterCompanyPage,
+  },
+  {
+    path: GUIDE_ADMIN_PAGE,
+    element: GuideAdminPage,
+  },
+  {
+    path: GUIDE_UPDATE_PAGE_ROUTE,
+    element: UpdatePost,
+  },
+  {
+    path: COMPANY_ADMIN_PAGE,
+    element: CompanyAdminPage,
   },
   {
     path: "*",

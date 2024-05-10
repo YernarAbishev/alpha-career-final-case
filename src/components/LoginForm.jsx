@@ -18,8 +18,9 @@ function LoginForm() {
         email: email.toLowerCase(),
         password: password,
       });
-      console.log("Успешная авторизация:", res.data);
-      login(res.data); // Вызываем функцию login с токеном в качестве аргумента
+      console.log("Успешная авторизация:", res);
+
+      login(res.data.token);
       setError(null);
       navigate("/");
     } catch (error) {
@@ -29,7 +30,7 @@ function LoginForm() {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form login" onSubmit={handleSubmit}>
       <h1 className="title">Вход в систему</h1>
       <input
         className="form-control"
